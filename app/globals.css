@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+:root {
+  --PaynerColor: #f1f1f1;
+  --Black: #151515;
+  --waite: #fff;
+}
+body {
+  background: var(--PaynerColor);
+  color: #151515;
+  font-family: "Cairo", sans-serif;
+}
+
+.PaynerColorLaght {
+  background: var(--PaynerColor);
+}
+
+.text_PaynerColor {
+  color: var(--Black);
+}
+.PaynerColor {
+  background: var(--PaynerColor);
+}
+.SacendColor {
+  background: var(--SacendColor);
+}
+
+::selection {
+  background: var(--Black);
+}
+::-webkit-scrollbar {
+  background: none;
+}
+.Hero {
+  height: calc(100vh - 56px);
+}
+.flitr {
+  filter: grayscale(1);
+}
+.cleck {
+  height: calc(100vh - 56px);
+}
+.HeroINAll {
+  @apply flex justify-center  Hero  min-h-[600px] w-full;
+}
+.ContantInHero {
+  @apply flex flex-col items-center justify-center;
+}
+.animate-all {
+  transition: all 500ms;
+}
+
+.bg-lole:hover{
+  background: rgba(36, 36, 36, 0.208);
+}
+
+
+@media (min-width: 768px) {
+  .HeroINAll {
+    @apply grid grid-cols-1  md:grid-cols-2  Hero  min-h-[600px] w-full;
+  }
+  .ContantInHero {
+    @apply flex flex-col items-start justify-center;
+  }
+}
