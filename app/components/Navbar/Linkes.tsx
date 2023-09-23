@@ -13,7 +13,7 @@ function Linkes({ isActive, isNotActive }: isacktiv) {
 
   return (
     <div>
-      <div className="hidden sm:block">
+      <div className="hidden_and_show">
         <div className=" flex gap-2 selection:text-white ">
           <Link
             href={"/"}

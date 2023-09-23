@@ -61,8 +61,12 @@ body {
 .Phto_in_hero{
   @apply z-10 rounded-full relative bottom-[1x] selection:opacity-5  hidden
 }
+.hidden_and_show{
+  display: none;
+}
 @media (min-width : 640px){
-  .Phto_in_hero{
+  .Phto_in_hero,
+  .hidden_and_show{
     display: block;
   }
 }
