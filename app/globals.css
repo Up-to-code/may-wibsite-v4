@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -59,7 +58,14 @@ body {
 .bg-lole:hover{
   background: rgba(36, 36, 36, 0.208);
 }
-
+.Phto_in_hero{
+  @apply z-10 rounded-full relative bottom-[1x] selection:opacity-5  hidden
+}
+@media (min-width : 640px){
+  .Phto_in_hero{
+    display: block;
+  }
+}
 
 @media (min-width: 768px) {
   .HeroINAll {

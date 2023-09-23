@@ -8,7 +8,7 @@ export default function Phto() {
           src={Get_image.may_image}
           alt="me"
           priority
-          className="z-10 rounded-full relative bottom-[1x] selection:opacity-5  hidden  sm:block   "
+          className="Phto_in_hero "
           width={"250"}
           placeholder="blur"
         ></Image>
