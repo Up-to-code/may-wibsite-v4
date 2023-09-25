@@ -60,7 +60,7 @@ function Linkes({ isActive, isNotActive }: isacktiv) {
                 : "")
             }
           >
-            Abuot
+            About
           </Link>
         </div>
       </div>

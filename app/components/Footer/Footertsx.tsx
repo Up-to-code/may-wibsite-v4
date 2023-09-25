@@ -1,26 +1,55 @@
+import Link from "next/link";
+
 function Footer() {
   return (
     <>
       <footer className="footer p-10 bg-black text-neutral-content">
         <nav>
-          <header className="footer-title">Services</header>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <header className="footer-title">Sections</header>
+          <Link className="link link-hover" href={"/"}>
+            Home
+          </Link>
+          <Link className="link link-hover" href={"/Skiles"}>
+            Skiles
+          </Link>
+
+          <Link className="link link-hover" href={"/Projekts"}>
+            Projekts
+          </Link>
+
+          <Link className="link link-hover" href={"/About"}>
+            About us
+          </Link>
         </nav>
         <nav>
-          <header className="footer-title">Company</header>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav>
-          <header className="footer-title">Legal</header>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <header className="footer-title">Social media</header>
+          <a className="link link-hover" href="https://github.com/ensite-code">
+            github
+          </a>
+          <a
+            className="link link-hover"
+            href="https://www.pinterest.com/ahmed_developer/"
+          >
+            pinterest
+          </a>
+          <a
+            className="link link-hover"
+            href="https://www.instagram.com/msteer_code_x/"
+          >
+            youtube
+          </a>
+          <a
+            className="link link-hover"
+            href="https://www.tiktok.com/@ahmed_ens?lang=en"
+          >
+            tiktok
+          </a>
+          <a
+            className="link link-hover"
+            href="https://www.youtube.com/@Ahmed_Mansour_Al_Rife"
+          >
+            youtube
+          </a>
         </nav>
       </footer>
     </>

@@ -3,6 +3,18 @@
     "development"
   ],
   "hints": {
-    "typescript-config/is-valid": "off"
+    "typescript-config/is-valid": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off"
+      }
+    ]
   }
 }

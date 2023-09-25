@@ -1,4 +1,4 @@
-import About from "@/app/components/Abuot/About";
+import About from "@/app/components/About/About";
 
 function page() {
   return (

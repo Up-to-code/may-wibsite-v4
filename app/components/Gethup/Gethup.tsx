@@ -5,7 +5,7 @@ function Gethup() {
     <div className="bg-blue-700  h-14 px-4">
       <Container>
         <div className="h-full text-white flex justify-between items-center ">
-          <p>Gethup</p>
+          <p>Github</p>
           <a
             href="https://github.com/ensite-code"
             className="text-black py-1 px-4 rounded-lg bg-white  font-bold"
