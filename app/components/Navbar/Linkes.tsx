@@ -52,10 +52,10 @@ function Linkes({ isActive, isNotActive }: isacktiv) {
           </Link>
 
           <Link
-            href={"/Abuot"}
+            href={"/About"}
             className={
               " py-1 px-2  text-gray-800" +
-              (pathname == "/Abuot"
+              (pathname == "/About"
                 ? " font-semibold border-b border-black text-black"
                 : "")
             }
