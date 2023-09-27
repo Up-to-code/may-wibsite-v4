@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Contanet_in_Hero() {
   return (
     <div className="ContantInHero">
@@ -5,12 +7,15 @@ function Contanet_in_Hero() {
         Hello<span className="text-blue-600 ">.</span>
       </h1>
       <p className="text-gray-600 my-4 selection:text-white max-w-[300px] text-center sm:text-start">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        blanditiis perspiciatis laudantium,
+        My name is Ahmed Mansour. Born in 2004 front end developer And I worked
+        on several projects and you can see a few my projects
       </p>
-      <button className="bg-black text-white font-semibold py-2 px-7 ">
-        Start
-      </button>
+      <Link
+        href={"https://github.com/Up-to-code"}
+        className="bg-black text-white font-semibold py-2 px-7"
+      >
+        Github
+      </Link>
     </div>
   );
 }

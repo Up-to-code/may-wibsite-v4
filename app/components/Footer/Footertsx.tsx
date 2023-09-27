@@ -23,7 +23,7 @@ function Footer() {
         </nav>
         <nav>
           <header className="footer-title">Social media</header>
-          <a className="link link-hover" href="https://github.com/ensite-code">
+          <a className="link link-hover" href="https://github.com/Up-to-code">
             github
           </a>
           <a
@@ -36,7 +36,7 @@ function Footer() {
             className="link link-hover"
             href="https://www.instagram.com/msteer_code_x/"
           >
-            youtube
+            instagram
           </a>
           <a
             className="link link-hover"

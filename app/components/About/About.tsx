@@ -21,8 +21,8 @@ function About() {
               <span className="text-white ">About me</span>
             </Title>
             <p className="text-white ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-              magnam fuga dolorem enim fugit vero consequuntur rem corporis{" "}
+              My name is Ahmed Mansour. Born in 2004 front end developer And I
+              worked on several projects and you can see a few my projects
             </p>
           </div>
         </div>
