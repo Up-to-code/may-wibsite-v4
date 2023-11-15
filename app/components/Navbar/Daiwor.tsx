@@ -15,8 +15,8 @@ function Daiwor({ isActive, sNotActive }: isOpn) {
   useEffect(() => {
     setanimate(
       isActive
-        ? "translate-y-14 h-10 opacity-75 bg-black h-screen animate-all "
-        : " translate-y-0 h-screen opacity-0 bg-black "
+        ? "z-1 translate-y-14 h-10 bg-som-black bg-black h-screen animate-all "
+        : "z-1 translate-y-[-100vh] h-screen  bg-som-black vis  animate-all "
     );
   }, [isActive]);
 
@@ -26,7 +26,7 @@ function Daiwor({ isActive, sNotActive }: isOpn) {
   };
 
   return (
-    <div className={animatea + "w-full  fixed block sm:hidden"}>
+    <div className={(animatea) + (" w-full  fixed block sm:hidden")}>
       <div className="w-full flex flex-col justify-center items-center  text-white gap-3 pt-8 text-xl font-bold ">
         <Link
           href={"/"}

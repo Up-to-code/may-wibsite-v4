@@ -16,7 +16,7 @@ function Icone({ isActive, isNotActive }: isacktiv) {
       onClick={() => {
         ClickIcon();
       }}
-      className="block sm:hidden "
+      className="block sm:hidden cursor-pointer "
     >
       <div className="rotate-90 px-2 font-bold text-lg ">|||</div>
     </div>

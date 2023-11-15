@@ -15,7 +15,16 @@ body {
   color: #151515;
   font-family: "Cairo", sans-serif;
 }
-
+.bg-som-black {
+  background: rgba(0, 0, 0, 0.772);
+}
+.z-1 {
+  z-index: 10;
+}
+.vis{
+  visibility: hidden;
+}
+.animate-all
 .PaynerColorLaght {
   background: var(--PaynerColor);
 }
@@ -55,18 +64,18 @@ body {
   transition: all 500ms;
 }
 
-.bg-lole:hover{
+.bg-lole:hover {
   background: rgba(36, 36, 36, 0.208);
 }
-.Phto_in_hero{
-  @apply z-10 rounded-full relative bottom-[1x] selection:opacity-5  hidden
+.Phto_in_hero {
+  @apply z-10 rounded-full relative bottom-[1x] selection:opacity-5  hidden;
 }
-.hidden_and_show{
+.hidden_and_show {
   display: none;
 }
-@media (min-width : 640px){
+@media (min-width: 640px) {
   .Phto_in_hero,
-  .hidden_and_show{
+  .hidden_and_show {
     display: block;
   }
 }

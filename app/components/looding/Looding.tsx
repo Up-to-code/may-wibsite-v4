@@ -2,7 +2,7 @@
 import {Card, Skeleton} from "@nextui-org/react";
 export default function Looding() {
   return (
-    <Card className=" w-[300px] space-y-5 p-4" >
+    <Card className=" w-[300px] space-y-5 p-4 m-auto "  >
       <Skeleton className="rounded-lg">
         <div className="h-32 rounded-lg bg-default-300"></div>
       </Skeleton>

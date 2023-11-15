@@ -29,7 +29,7 @@ const getData = async ({ params }: Props) => {
           />
         </div>
         <div className="text-4xl font-bold py-4">{allData?.title}</div>
-        <div className=" flex gap-2">
+        <div className=" flex gap-2 flex-wrap">
           {array.map((e: string) => {
             return (
               <p
@@ -43,7 +43,14 @@ const getData = async ({ params }: Props) => {
           {allData.Skile}
         </div>
         <div className="text-lg py-4 ">
-          <article>{allData?.cont}</article>
+          <article>
+            {allData?.cont.split("\n").map((e: string, index: number) => {
+
+              return (<p key={index}> {e}</p>)
+            })}
+
+
+          </article>
         </div>
         <IconContext.Provider value={{ size: "24px" }}>
           <div className="flex gap-3 absolute bottom-3 left-5 ">
@@ -74,6 +81,7 @@ const getData = async ({ params }: Props) => {
 };
 
 function page({ params }: Props) {
+
   const data = getData({ params });
   return data;
 }
