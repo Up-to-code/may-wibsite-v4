@@ -59,7 +59,7 @@ function Daiwor({ isActive, sNotActive }: isOpn) {
         </Link>
 
         <Link
-          href={"/Abuot"}
+          href={"/About"}
           className={"bg-lole w-full text-center py-2 px-4  tr animate-all "}
           onClick={() => {
             close();
