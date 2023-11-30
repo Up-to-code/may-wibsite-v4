@@ -13,8 +13,8 @@ function Footer() {
             Skiles
           </Link>
 
-          <Link className="link link-hover" href={"/Projekts"}>
-            Projekts
+          <Link className="link link-hover" href={"/Projects"}>
+            Projects
           </Link>
 
           <Link className="link link-hover" href={"/About"}>

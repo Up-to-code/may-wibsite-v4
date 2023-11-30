@@ -11,7 +11,7 @@ function Grid_of_cards() {
 
   let api: [] | DocumentData = [];
   const getApi = async () => {
-    const querySnapshot = await getDocs(collection(db, "Projekts"));
+    const querySnapshot = await getDocs(collection(db, "Projects"));
     querySnapshot.forEach((doc) => {
       let ob = { id: doc.id, ...doc.data() };
       api.push(ob);

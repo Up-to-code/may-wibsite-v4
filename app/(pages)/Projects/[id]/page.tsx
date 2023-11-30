@@ -12,7 +12,7 @@ type Props = {
 };
 
 const getData = async ({ params }: Props) => {
-  const docRef = doc(db, "Projekts", params.id);
+  const docRef = doc(db, "Projects", params.id);
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
@@ -23,7 +23,7 @@ const getData = async ({ params }: Props) => {
         <div className="h-52 bg-zinc-300 rounded flex justify-center p-3">
           <Image
             src={allData?.Imageurl}
-            alt="Prodackt"
+            alt="Project"
             width={"300"}
             height={"250"}
           />

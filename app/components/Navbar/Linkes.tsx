@@ -40,15 +40,15 @@ function Linkes({ isActive, isNotActive }: isacktiv) {
           </Link>
 
           <Link
-            href={"/Projekts"}
+            href={"/Projects"}
             className={
               " py-1 px-2  text-gray-800" +
-              (pathname == "/Projekts"
+              (pathname == "/Projects"
                 ? " font-semibold border-b border-black text-black"
                 : "")
             }
           >
-            Projekts
+            Projects
           </Link>
 
           <Link

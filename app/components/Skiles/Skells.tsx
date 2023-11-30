@@ -24,7 +24,7 @@ function Skells() {
             <Skile sk="nodejs" />
             <Skile sk="react" />
             <Skile sk="nextjs" />
-            <Skile sk="php" />
+            <Skile sk="express.js" />
             <Skile sk="tailwind css" />
             <Skile sk="Bootstrp" />
           </div>

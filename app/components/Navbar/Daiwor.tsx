@@ -20,13 +20,12 @@ function Daiwor({ isActive, sNotActive }: isOpn) {
     );
   }, [isActive]);
 
-
   const close = () => {
     sNotActive(false);
   };
 
   return (
-    <div className={(animatea) + (" w-full  fixed block sm:hidden")}>
+    <div className={animatea + " w-full  fixed block sm:hidden"}>
       <div className="w-full flex flex-col justify-center items-center  text-white gap-3 pt-8 text-xl font-bold ">
         <Link
           href={"/"}
@@ -49,13 +48,13 @@ function Daiwor({ isActive, sNotActive }: isOpn) {
         </Link>
 
         <Link
-          href={"/Projekts"}
+          href={"/Projects"}
           className={"bg-lole w-full text-center py-2 px-4  tr animate-all "}
           onClick={() => {
             close();
           }}
         >
-          Projekts
+          Projects
         </Link>
 
         <Link

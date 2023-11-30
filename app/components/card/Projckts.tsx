@@ -8,7 +8,7 @@ function Projckts() {
       <Container>
         <div className="grid grid-cols-1 justify-center items-center">
           <div className="flex justify-center  items-center lg:justify-start lg:px-14">
-            <Title>Projkets</Title>
+            <Title>Projects</Title>
           </div>
 
           <Grid_of_cards />
