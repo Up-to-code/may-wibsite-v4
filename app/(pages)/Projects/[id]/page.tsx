@@ -12,7 +12,7 @@ type Props = {
 };
 
 const getData = async ({ params }: Props) => {
-  const docRef = doc(db, "Projects", params.id);
+  const docRef = doc(db, "Projekts", params.id);
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
@@ -45,11 +45,8 @@ const getData = async ({ params }: Props) => {
         <div className="text-lg py-4 ">
           <article>
             {allData?.cont.split("\n").map((e: string, index: number) => {
-
-              return (<p key={index}> {e}</p>)
+              return <p key={index}> {e}</p>;
             })}
-
-
           </article>
         </div>
         <IconContext.Provider value={{ size: "24px" }}>
@@ -81,7 +78,6 @@ const getData = async ({ params }: Props) => {
 };
 
 function page({ params }: Props) {
-
   const data = getData({ params });
   return data;
 }

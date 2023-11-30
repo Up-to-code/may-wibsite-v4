@@ -11,7 +11,7 @@ function Grid_of_cards() {
 
   let api: [] | DocumentData = [];
   const getApi = async () => {
-    const querySnapshot = await getDocs(collection(db, "Projects"));
+    const querySnapshot = await getDocs(collection(db, "Projekts"));
     querySnapshot.forEach((doc) => {
       let ob = { id: doc.id, ...doc.data() };
       api.push(ob);
@@ -34,17 +34,17 @@ function Grid_of_cards() {
     <div className="py-8 grid grid-cols-1 sm:grid-cols-2  items-center  gap-y-10  ">
       {Data
         ? Data?.map((e: any) => {
-          return (
-            <>
-              <Card
-                title_art={e.title}
-                url={e.id}
-                urlImage={e.Imageurl}
-                key={e.id}
-              />
-            </>
-          );
-        })
+            return (
+              <>
+                <Card
+                  title_art={e.title}
+                  url={e.id}
+                  urlImage={e.Imageurl}
+                  key={e.id}
+                />
+              </>
+            );
+          })
         : islod}
     </div>
   );
