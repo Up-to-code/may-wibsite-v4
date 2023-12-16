@@ -15,7 +15,7 @@ function Contanet_in_Hero() {
           href={"https://github.com/Up-to-code"}
           className="bg-black text-white font-semibold py-2 px-7 rounded"
         >
-          Github
+          CV
         </Link>
         <Link
           href={"https://firebasestorage.googleapis.com/v0/b/my-website-310.appspot.com/o/cv.pdf?alt=media&token=58531fbb-4514-437d-b8a7-22ca948e883f"}
