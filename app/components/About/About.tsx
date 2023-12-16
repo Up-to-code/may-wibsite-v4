@@ -21,8 +21,8 @@ function About() {
               <span className="text-white ">About me</span>
             </Title>
             <p className="text-white ">
-           I am Ahmed Mansour  frontend developer
- I use ReactJS and Next.js in my work 
+              I am Ahmed Mansour  frontend developer
+              I use ReactJS and Next.js in my work
             </p>
           </div>
         </div>
