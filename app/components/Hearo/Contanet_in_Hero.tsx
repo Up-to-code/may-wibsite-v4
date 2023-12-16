@@ -7,8 +7,8 @@ function Contanet_in_Hero() {
         Hello<span className="text-blue-600 ">.</span>
       </h1>
       <p className="text-gray-600 my-4 selection:text-white max-w-[300px] text-center sm:text-start">
-        My name is Ahmed Mansour. Born in 2004 front end developer And I worked
-        on several projects and you can see a few my projects
+        I am Ahmed Mansour  frontend developer
+        I use ReactJS and Next.js in my work
       </p>
       <Link
         href={"https://github.com/Up-to-code"}
