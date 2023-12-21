@@ -9,8 +9,6 @@ export const metadata: Metadata = {
   title: "Ahmed_Mansour",
   description: "I am Ahmed Mansour frontend developer I use ReactJS and Next.js in my work",
   keywords:"ahmed mansour , frontend dev , reactJS ,Nex js",
-  author:"Ahmed Mansour",
-  
 };
 
 
