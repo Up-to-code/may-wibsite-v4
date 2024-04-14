@@ -43,10 +43,11 @@ function Grid_of_cards() {
               return (
                 <>
                   <Card
+                  key={index}
                     title_art={e.title}
                     url={e.id}
                     urlImage={e.Imageurl}
-                    key={e.id}
+                 
                   />
                 </>)
             }
@@ -56,14 +57,14 @@ function Grid_of_cards() {
 
 
           : Data
-            ? Data?.map((e: any) => {
+            ? Data?.map((e: any, index :number) => {
               return (
                 <>
                   <Card
                     title_art={e.title}
                     url={e.id}
                     urlImage={e.Imageurl}
-                    key={e.id}
+                    key={index}
                   />
                 </>
               );
