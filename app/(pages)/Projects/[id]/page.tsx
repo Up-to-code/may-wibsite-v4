@@ -26,6 +26,7 @@ const getData = async ({ params }: Props) => {
             alt="Project"
             width={"300"}
             height={"250"}
+            className="w-auto"
           />
         </div>
         <div className="text-4xl font-bold py-4">{allData?.title}</div>
