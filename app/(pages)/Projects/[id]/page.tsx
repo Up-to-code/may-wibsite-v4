@@ -54,18 +54,20 @@ const getData = async ({ params }: Props) => {
           <div className="flex gap-3 absolute bottom-3 left-5 ">
             <div className="bg-zinc-800 px-5 py-2 rounded-md">
               <a
+                target="_blank"
                 href={allData?.githup}
                 className="text-white font-bold text-lg flex justify-center items-center gap-2  "
-              >
+                rel="noopener noreferrer">
                 <AiFillGithub />
                 Github
               </a>
             </div>
             <div className="bg-blue-600 px-5 py-2 rounded-md">
               <a
+                target="_blank"
                 href={allData?.show}
                 className="text-white font-bold text-lg flex justify-center items-center gap-2   "
-              >
+                rel="noopener noreferrer">
                 <BiShow />
                 Show
               </a>

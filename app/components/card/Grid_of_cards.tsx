@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import Looding from "../looding/Looding";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 
 function Grid_of_cards() {
@@ -33,31 +34,28 @@ function Grid_of_cards() {
       <Looding />
     </>
   );
-  return (
+  return (<>
     <div className="py-8 grid grid-cols-1 sm:grid-cols-2  items-center  gap-y-10  ">
 
       {
         pathname == "/" ?
           Data ? Data?.map((e: any, index: number) => {
-            if (index <= 4) {
+            if (index < 4) {
               return (
                 <>
                   <Card
-                  key={index}
+                    key={index}
                     title_art={e.title}
                     url={e.id}
                     urlImage={e.Imageurl}
-                 
                   />
                 </>)
             }
-
-          }) : islod
-
-
+          })
+            : islod
 
           : Data
-            ? Data?.map((e: any, index :number) => {
+            ? Data?.map((e: any, index: number) => {
               return (
                 <>
                   <Card
@@ -72,8 +70,17 @@ function Grid_of_cards() {
             : islod
       }
 
-
     </div>
+
+    {
+      pathname == "/" &&
+      Data?.length > 4 && <Link href={"/Projects"}>
+        <div className="py-2 px-5 bg-blue-500 text-white font-bold w-max mx-12">
+          More
+        </div>
+      </Link>
+    }
+  </>
   );
 }
 

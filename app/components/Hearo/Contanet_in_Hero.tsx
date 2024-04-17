@@ -12,16 +12,20 @@ function Contanet_in_Hero() {
       </p>
       <div className="flex gap-7">
         <Link
+          target="_blank"
+          rel="noopener noreferrer"
           href={"https://github.com/Up-to-code"}
           className="bg-black text-white font-semibold py-2 px-7 rounded"
         >
           Github
         </Link>
         <Link
-          href={"https://firebasestorage.googleapis.com/v0/b/my-website-310.appspot.com/o/cv.pdf?alt=media&token=58531fbb-4514-437d-b8a7-22ca948e883f"}
+          target="_blank"
+          rel="noopener noreferrer"
+          href={"https://firebasestorage.googleapis.com/v0/b/my-website-310.appspot.com/o/%D8%B3%D9%8A%D8%B1%D8%A9%20%D8%B0%D8%A7%D8%AA%D9%8A%D8%A9%20%20%D8%A3%D8%A8%D9%8A%D8%B6%20%D9%88%20%D8%B1%D8%B5%D8%A7%D8%B5%D9%89%20%D8%AD%D8%AF%D9%8A%D8%AB%20%20%D8%A8%D8%B3%D9%8A%D8%B7%20(1).pdf?alt=media&token=0079feb0-24ab-4e64-9c1d-407e7f01aba6"}
           className="bg-blue-600  text-white font-semibold py-2 px-7 rounded"
         >
-           CV
+          CV
         </Link>
       </div>
 
