@@ -3,12 +3,12 @@
 
 import { db } from "@/app/Firebase/db";
 import { getDocs, collection } from "firebase/firestore";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import Card from "./Card";
-import Looding from "../looding/Looding";
 import Link from "next/link";
 import { useProjcts } from "@/app/Store/Projcts_Store";
 import { usePathname } from "next/navigation";
+import Looding from "../looding/Looding";
 
 function Grid_of_cards() {
   const { Projcts, setAllProjcts } = useProjcts();
@@ -35,39 +35,41 @@ function Grid_of_cards() {
   return (
     <>
       <div className="py-8 grid grid-cols-1 sm:grid-cols-2  items-center  gap-y-10  ">
-        {pathname == "/"
-          ? Projcts
+        <Suspense fallback={islod}>
+          {pathname == "/"
+            ? Projcts
+              ? Projcts?.map((e: any, index: number) => {
+                  if (index < 4) {
+                    return (
+                      <>
+                        <Card
+                          key={index}
+                          title_art={e.title}
+                          url={e.id}
+                          urlImage={e.Imageurl}
+                        />
+                      </>
+                    );
+                  } else {
+                    return null;
+                  }
+                })
+              : islod
+            : Projcts
             ? Projcts?.map((e: any, index: number) => {
-                if (index < 4) {
-                  return (
-                    <>
-                      <Card
-                        key={index}
-                        title_art={e.title}
-                        url={e.id}
-                        urlImage={e.Imageurl}
-                      />
-                    </>
-                  );
-                } else {
-                  return null;
-                }
+                return (
+                  <>
+                    <Card
+                      title_art={e.title}
+                      url={e.id}
+                      urlImage={e.Imageurl}
+                      key={index}
+                    />
+                  </>
+                );
               })
-            : islod
-          : Projcts
-          ? Projcts?.map((e: any, index: number) => {
-              return (
-                <>
-                  <Card
-                    title_art={e.title}
-                    url={e.id}
-                    urlImage={e.Imageurl}
-                    key={index}
-                  />
-                </>
-              );
-            })
-          : islod}
+            : islod}
+        </Suspense>
       </div>
 
       {pathname == "/" && Projcts?.length > 4 && (
