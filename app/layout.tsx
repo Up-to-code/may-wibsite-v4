@@ -1,4 +1,3 @@
-import { Providers } from "./app/providers";
 import Footer from "./components/Footer/Footertsx";
 import Gethup from "./components/Gethup/Gethup";
 import Nav from "./components/Navbar/Nav";
@@ -20,12 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <body className=" min-h-screen" suppressHydrationWarning={true}>
-        <Providers>
+      
           <Nav />
           {children}
           <Gethup />
           <Footer />
-        </Providers>
+     
       </body>
     </html>
   );

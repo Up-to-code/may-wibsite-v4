@@ -1,8 +1,26 @@
+"use client";
+import { useEffect, Suspense } from "react";
 import Container from "../public_compnets/Container";
 import Image from "next/image";
 import { Get_image } from "@/public/Get_image";
 import Skile from "./Skile";
-function Skells() {
+import { db } from "@/app/Firebase/db";
+import { DocumentData, collection, getDocs } from "firebase/firestore";
+import { useSkiles } from "@/app/Store/Skiles_Srore";
+
+function Skiles() {
+  const { Skiles, setAllSkiles } = useSkiles();
+  useEffect(() => {
+    const getSkiles = async () => {
+      if (Skiles.length === 0) {
+        const querySnapshot = await getDocs(collection(db, "Skiles"));
+        const skiles_data = querySnapshot.docs.map((doc) => doc.data());
+        setAllSkiles(skiles_data);
+      }
+    };
+    getSkiles();
+  }, [Skiles.length > 0]);
+
   return (
     <div className="min-h-[400px] bg-black w-full">
       <Container>
@@ -15,23 +33,21 @@ function Skells() {
               className=" flitr    "
             ></Image>
           </div>
-
-          <div className="flex gap-3 flex-wrap w-72  ">
-            <Skile sk="html" />
-            <Skile sk="css" />
-            <Skile sk="javascrpit" />
-            <Skile sk="typescrpit" />
-            <Skile sk="nodejs" />
-            <Skile sk="react" />
-            <Skile sk="nextjs" />
-            <Skile sk="express.js" />
-            <Skile sk="tailwind css" />
-            <Skile sk="Bootstrp" />
-          </div>
+          <Suspense
+            fallback={
+              <div className="skiltos loading text-white">Loading...</div>
+            }
+          >
+            <div className="flex gap-3 flex-wrap w-72  ">
+              {Skiles.map((e: DocumentData) => {
+                return <Skile sk={e.Skile} key={e.id} />;
+              })}
+            </div>
+          </Suspense>
         </div>
       </Container>
     </div>
   );
 }
 
-export default Skells;
+export default Skiles;

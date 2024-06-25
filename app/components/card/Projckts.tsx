@@ -4,7 +4,7 @@ import Grid_of_cards from "./Grid_of_cards";
 
 function Projckts() {
   return (
-    <div className="bg-white py-8 min-h-screen">
+    <div className="bg-white py-8 min-h-screen rounded">
       <Container>
         <div className="grid grid-cols-1 justify-center items-center">
           <div className="flex justify-center  items-center lg:justify-start lg:px-14">
