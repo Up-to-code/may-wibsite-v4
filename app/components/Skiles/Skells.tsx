@@ -1,12 +1,13 @@
 "use client";
-import { useEffect, Suspense } from "react";
+import { useEffect, Suspense, lazy } from "react";
 import Container from "../public_compnets/Container";
 import Image from "next/image";
 import { Get_image } from "@/public/Get_image";
-import Skile from "./Skile";
 import { db } from "@/app/Firebase/db";
 import { DocumentData, collection, getDocs } from "firebase/firestore";
 import { useSkiles } from "@/app/Store/Skiles_Srore";
+
+const LazySkile = lazy(() => import("./Skile"));
 
 function Skiles() {
   const { Skiles, setAllSkiles } = useSkiles();
@@ -31,6 +32,7 @@ function Skiles() {
               alt="me"
               width={"100"}
               className=" flitr    "
+              loading="lazy"
             ></Image>
           </div>
           <Suspense
@@ -40,7 +42,7 @@ function Skiles() {
           >
             <div className="flex gap-3 flex-wrap w-72  ">
               {Skiles.map((e: DocumentData) => {
-                return <Skile sk={e.Skile} key={e.id} />;
+                return <LazySkile sk={e.Skile} key={e.id} />;
               })}
             </div>
           </Suspense>

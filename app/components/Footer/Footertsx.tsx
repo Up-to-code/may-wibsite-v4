@@ -40,7 +40,7 @@ function Footer() {
           </a>
           <a
             className="link link-hover"
-            href="https://www.tiktok.com/@ahmed_ens?lang=en"
+            href="https://www.tiktok.com/@ahmed_mansour_dev?lang=en"
           >
             tiktok
           </a>
