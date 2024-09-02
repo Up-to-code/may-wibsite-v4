@@ -50,7 +50,17 @@ function Linkes({ isActive, isNotActive }: isacktiv) {
           >
             Projects
           </Link>
-
+             <Link
+             href={"/apps"}
+             className={
+               " py-1 px-2  text-gray-800" +
+               (pathname == "/Apps"
+                 ? " font-semibold border-b border-black text-black"
+                 : "")
+             }
+           >
+             Apps
+           </Link>
           <Link
             href={"/About"}
             className={
