@@ -6,7 +6,7 @@ const DownloadPage = () => {
   const [selectedApp, setSelectedApp] = useState<string | null>(null);
 
   const apps = [
-    { name: 'App', description: 'this is a test app', downloadLink: 'https://expo.dev/artifacts/eas/x9fbdc2hi15EzYM9evQpE2.apk' },
+    { name: 'App', description: 'this is a test app', downloadLink: 'https://expo.dev/artifacts/eas/5RwXNmLQvqxc9bhaaxFQdi.apk' },
   ];
 
   return (
