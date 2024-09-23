@@ -1,55 +1,73 @@
 "use client";
+
 import { useEffect, Suspense, lazy } from "react";
-import Container from "../public_compnets/Container";
-import Image from "next/image";
-import { Get_image } from "@/public/Get_image";
+import Container from "../public_components/Container";
 import { db } from "@/app/Firebase/db";
-import { DocumentData, collection, getDocs } from "firebase/firestore";
-import { useSkiles } from "@/app/Store/Skiles_Srore";
+import { collection, getDocs } from "firebase/firestore";
+import { useSkills } from "@/app/Store/Skills_Store";
 
-const LazySkile = lazy(() => import("./Skile"));
+const LazySkill = lazy(() => import("./Skill"));
 
-function Skiles() {
-  const { Skiles, setAllSkiles } = useSkiles();
+function Skills() {
+  const { skills, setAllSkills } = useSkills();
+
   useEffect(() => {
-    const getSkiles = async () => {
-      if (Skiles.length === 0) {
-        const querySnapshot = await getDocs(collection(db, "Skiles"));
-        const skiles_data = querySnapshot.docs.map((doc) => doc.data());
-        setAllSkiles(skiles_data);
+    const getSkills = async () => {
+      if (skills.length === 0) {
+        try {
+          const querySnapshot = await getDocs(collection(db, "Skiles"));
+          const skillsData = querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setAllSkills(skillsData);
+        } catch (error) {
+          console.error("Error fetching skills:", error);
+        }
       }
     };
-    getSkiles();
-  }, [Skiles.length > 0]);
+    getSkills();
+  }, [skills.length, setAllSkills]);
 
   return (
-    <div className="min-h-[400px] bg-black w-full">
+    <div className="min-h-screen bg-gradient-to-b from-gray-800 to-gray-900 flex flex-col items-center justify-center py-16">
       <Container>
-        <div className="flex items-center min-h-[400px]  justify-evenly ">
-          <div className="h-full ">
-            <Image
-              src={Get_image.me_img1}
-              alt="me"
-              width={"100"}
-              className=" flitr    "
-              loading="lazy"
-            ></Image>
-          </div>
-          <Suspense
-            fallback={
-              <div className="skiltos loading text-white">Loading...</div>
-            }
-          >
-            <div className="flex gap-3 flex-wrap w-72  ">
-              {Skiles.map((e: DocumentData) => {
-                return <LazySkile sk={e.Skile} key={e.id} />;
-              })}
-            </div>
-          </Suspense>
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold text-white mb-4">My Skills</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Explore the technologies and tools {"I've "}mastered on my journey as a developer.
+          </p>
         </div>
+
+        <Suspense fallback={<SkillsSkeleton />}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {skills.map((skill, index) => (
+              <div
+                key={skill.id}
+                className="transition-transform duration-300 hover:scale-105 transform shadow-md hover:shadow-2xl rounded-lg overflow-hidden"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <LazySkill sk={skill.Skile} />
+              </div>
+            ))}
+          </div>
+        </Suspense>
       </Container>
     </div>
   );
 }
 
-export default Skiles;
+function SkillsSkeleton() {
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      {Array.from({ length: 8 }, (_, index) => (
+        <div
+          key={index}
+          className="bg-gray-700 h-16 rounded-lg animate-pulse shadow-md"
+        ></div>
+      ))}
+    </div>
+  );
+}
+
+export default Skills;

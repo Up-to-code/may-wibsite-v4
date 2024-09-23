@@ -1,4 +1,4 @@
-import Container from "../public_compnets/Container";
+import Container from "../public_components/Container";
 import Grid_of_Hero from "./Grid_of_Hero";
 export default function Hero() {
   return (

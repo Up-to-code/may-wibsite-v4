@@ -1,5 +1,5 @@
-import Container from "../public_compnets/Container";
-import Title from "../public_compnets/Title";
+import Container from "../public_components/Container";
+import Title from "../public_components/Title";
 import Grid_of_cards from "./Grid_of_cards";
 
 function Projckts() {

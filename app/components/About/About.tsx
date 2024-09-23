@@ -1,7 +1,7 @@
-import Container from "../public_compnets/Container";
+import Container from "../public_components/Container";
 import Image from "next/image";
 import { Get_image } from "@/public/Get_image";
-import Title from "../public_compnets/Title";
+import Title from "../public_components/Title";
 
 function About() {
   return (

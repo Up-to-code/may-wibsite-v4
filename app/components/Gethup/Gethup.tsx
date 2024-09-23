@@ -1,4 +1,4 @@
-import Container from "../public_compnets/Container";
+import Container from "../public_components/Container";
 
 function Gethup() {
   return (
